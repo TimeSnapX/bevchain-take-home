@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BevChain take-home · 40 to 55 hour weeks</title>
+    <meta
+      name="description"
+      content="Expected weekly take-home and yearly salary for a BevChain casual role at $41.21 an hour, across 40, 45, 50 and 55 hour weeks."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
+
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Casual pay floor · FY 2026–27</p>
+          <h1>BevChain take-home</h1>
+        </div>
+      </div>
+      <p class="start-pill">Starts tomorrow</p>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="kicker">What actually lands in the bank</p>
+        <h2>
+          $41.21 an hour, 40 to 55 hours a week.
+          <em>Here is the take-home picture.</em>
+        </h2>
+        <p class="lede">
+          Four working-week sizes, side by side. Weekly figures match ATO PAYG
+          withholding (scale 2, tax-free threshold claimed). Yearly figures use
+          2026–27 resident tax, the low income tax offset, and the 2% Medicare
+          levy.
+        </p>
+      </section>
+
+      <section class="controls" aria-label="Pay settings">
+        <label>
+          Hourly rate
+          <input id="rate" type="number" min="1" step="0.01" value="41.21" />
+        </label>
+        <label>
+          Weeks worked
+          <input id="weeks" type="number" min="1" max="53" step="1" value="52" />
+        </label>
+        <label class="check">
+          <input id="overtime" type="checkbox" />
+          Award-style overtime after 38h
+        </label>
+        <label class="check">
+          <input id="help" type="checkbox" />
+          HELP / HECS debt
+        </label>
+        <label class="check">
+          <input id="privateHealth" type="checkbox" checked />
+          Private hospital cover
+        </label>
+      </section>
+
+      <section class="cards" id="cards" aria-label="Hour scenarios"></section>
+
+      <section class="charts">
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Weekly take-home</h3>
+            <p>Payslip net after PAYG tax</p>
+          </div>
+          <div id="weeklyChart" class="chart"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Yearly salary</h3>
+            <p>Gross vs take-home for the weeks you work</p>
+          </div>
+          <div id="yearlyChart" class="chart"></div>
+        </article>
+      </section>
+
+      <section class="table-wrap">
+        <div class="panel-head">
+          <h3>Full comparison</h3>
+          <p id="tableNote">52 weeks at $41.21 an hour, no overtime loading.</p>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Week size</th>
+                <th>Gross / week</th>
+                <th>Tax withheld</th>
+                <th>Take-home / week</th>
+                <th>Yearly gross</th>
+                <th>Yearly tax</th>
+                <th>Yearly take-home</th>
+                <th>Employer super</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="notes">
+        <h3>How to read this</h3>
+        <ul>
+          <li>
+            <strong>Weekly take-home</strong> is what a regular weekly payslip
+            should look like after PAYG withholding. It is the useful “what hits
+            my account” number.
+          </li>
+          <li>
+            <strong>Yearly salary</strong> is hours × rate × weeks worked.
+            Yearly take-home then subtracts income tax, Medicare levy, and
+            optional HELP / Medicare levy surcharge.
+          </li>
+          <li>
+            Super (12%) is paid by the employer on ordinary time earnings. It is
+            not take-home cash. If overtime is switched on, super is only counted
+            on the first 38 hours.
+          </li>
+          <li>
+            Casuals do not get paid annual leave. 52 weeks assumes you work every
+            week. Drop weeks worked to 48 if you take four unpaid weeks off.
+          </li>
+          <li>
+            Overtime is an estimate using Storage Services-style loadings: ordinary
+            casual rate to 38 hours, then 175% / 225% of the unloaded base.
+            Confirm your actual BevChain / labour-hire agreement.
+          </li>
+          <li>
+            Medicare levy surcharge (1%+) can apply from $105,001 a year if you
+            do not have private hospital cover. That is why 50 and 55 hour years
+            can look a little different with the cover box unchecked.
+          </li>
+        </ul>
+        <p class="disclaimer">
+          Planning estimate only, not tax advice and not a payslip. Rates current
+          for the 2026–27 Australian resident year. Shift penalties, allowances,
+          public holidays, and salary packaging are not included.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for a BevChain start. Open source on GitHub.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

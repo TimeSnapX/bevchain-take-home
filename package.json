@@ -1,0 +1,11 @@
+{
+  "name": "bevchain-take-home",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BevChain casual take-home pay dashboard for 40–55 hour weeks.",
+  "scripts": {
+    "start": "python -m http.server 4173",
+    "test": "node test-tax.js"
+  }
+}
