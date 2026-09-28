@@ -1,0 +1,36 @@
+{
+  "id": "/bevchain-take-home/",
+  "name": "BevChain Take-home",
+  "short_name": "Take-home",
+  "description": "Expected weekly take-home and yearly salary for a BevChain casual role across 40 to 55 hour weeks.",
+  "start_url": "./",
+  "scope": "/bevchain-take-home/",
+  "display": "standalone",
+  "background_color": "#0b0c0a",
+  "theme_color": "#0b0c0a",
+  "lang": "en-AU",
+  "dir": "ltr",
+  "categories": [
+    "finance"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
